@@ -26,7 +26,7 @@ import scala.util.Random
 //Hardware definition
 class MyTopLevel extends Component {
   val io = new Bundle {
-    val leds = out UInt(4 bits)
+    val leds = out UInt(8 bits)
   }
 
   val blueLed = new LedGlow(24);
@@ -34,10 +34,14 @@ class MyTopLevel extends Component {
   val yellowLed = new LedGlow(25);
   val redLed = new LedGlow(24);
 
-  io.leds(0) := blueLed.io.led;
-  io.leds(1) := greenLed.io.led;
-  io.leds(2) := yellowLed.io.led;
-  io.leds(3) := redLed.io.led;
+  io.leds(7) := blueLed.io.led;
+  io.leds(6) := greenLed.io.led;
+  io.leds(5) := yellowLed.io.led;
+  io.leds(4) := redLed.io.led;
+  io.leds(3) := blueLed.io.led;
+  io.leds(2) := greenLed.io.led;
+  io.leds(1) := yellowLed.io.led;
+  io.leds(0) := redLed.io.led;
 }
 
 

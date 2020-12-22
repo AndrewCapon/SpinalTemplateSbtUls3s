@@ -44,7 +44,7 @@ module top (
     input  clk_25mhz,
 
     // led outputs
-    output [3:0] led
+    output [7:0] led
   );
 
    

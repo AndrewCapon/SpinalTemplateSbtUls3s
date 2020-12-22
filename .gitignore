@@ -49,3 +49,6 @@ chip.txt
 .bloop
 .metals
 
+# ulx3s
+*.bit
+ulx3s_out.config
