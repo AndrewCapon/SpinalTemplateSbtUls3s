@@ -1,0 +1,5 @@
+#!/bin/sh
+ftp @${1} << EOF
+bin
+put ${2} fpga
+EOF
